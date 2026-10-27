@@ -1,8 +1,9 @@
 import { create } from "apisauce";
 import cache from "../utility/cache";
+import Constants from "expo-constants";
 
 const apiClient = create({
-  baseURL: "http://10.0.0.187:9000/api",
+  baseURL: Constants.manifest?.extra?.apiUrl || "http://localhost:9000/api",
 });
 
 const get = apiClient.get;

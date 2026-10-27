@@ -1,0 +1,8 @@
+name: imarket
+services:
+  web:
+    build: .
+    ports:
+      - "127.0.0.1:${IMARKET_PORT:-8081}:8080"
+    init: true
+    restart: unless-stopped
